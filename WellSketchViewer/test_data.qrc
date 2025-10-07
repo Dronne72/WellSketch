@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/data">
+        <file>resources/test_curve.json</file>
+    </qresource>
+</RCC>
