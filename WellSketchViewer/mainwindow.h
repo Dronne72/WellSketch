@@ -43,6 +43,8 @@ private slots:
     void onRangeChanged(const QCPRange &newRange,
                         const QCPRange &oldRange);
 
+    void on_pB_cansel_clicked();
+
 signals:
     void yAxisRangeChanged(const QCPRange &newRange);
 

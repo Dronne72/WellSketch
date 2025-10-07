@@ -1,0 +1,20 @@
+<svg width="223" height="216" viewBox="0 0 223 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_14_54" fill="white">
+<path d="M0 0H223V216H0V0Z"/>
+</mask>
+<path d="M0 0H223V216H0V0Z" fill="url(#paint0_linear_14_54)"/>
+<path d="M223 0H183V216H223H263V0H223ZM0 216H40V0H0H-40V216H0Z" fill="#6D6D6D" mask="url(#path-1-inside-1_14_54)"/>
+<circle cx="15" cy="29" r="11" fill="#585858"/>
+<ellipse cx="26" cy="122.5" rx="9" ry="7.5" fill="#585858"/>
+<ellipse cx="202" cy="29.5" rx="9" ry="7.5" fill="#585858"/>
+<circle cx="11" cy="195" r="11" fill="#585858"/>
+<circle cx="196" cy="176" r="11" fill="#585858"/>
+<ellipse cx="208" cy="109.5" rx="15" ry="14.5" fill="#585858"/>
+<defs>
+<linearGradient id="paint0_linear_14_54" x1="216.806" y1="111.5" x2="3.87152" y2="111.5" gradientUnits="userSpaceOnUse">
+<stop offset="0.0769231" stop-color="#A0A0A0"/>
+<stop offset="0.548077" stop-color="#E0E0E0"/>
+<stop offset="0.9375" stop-color="#A0A0A0"/>
+</linearGradient>
+</defs>
+</svg>

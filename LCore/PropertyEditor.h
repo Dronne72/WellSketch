@@ -16,7 +16,7 @@
 #include <QDateTimeEdit>
 #include <QDataStream>
 
-#include <DelegatePatternFill.h>
+#include "DelegatePatternFill.h"
 
 /*
     qt c++ create a pattern delegate based on QStyledItemDelegate for different colors and patterns.

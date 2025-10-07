@@ -13,18 +13,19 @@ add_definitions( -DQCUSTOMPLOT_USE_OPENGL )
 
 add_library(${PROJECT_NAME} STATIC ${H_FILES} ${CPP_FILES} ${UI_FILES})
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui OpenGL OpenGLWidgets Widgets PrintSupport)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui OpenGL OpenGLWidgets Widgets PrintSupport)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui OpenGL OpenGLWidgets Widgets PrintSupport LinguistTools  )
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui OpenGL OpenGLWidgets Widgets PrintSupport LinguistTools  )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
-	Qt::Core Qt::Widgets
-	Qt::Linguist
-	Qt6::PrintSupport
-	Qt6::OpenGL
-	Qt6::OpenGLWidgets
-	LCPot
-	opengl32
-)
+target_link_libraries(${PROJECT_NAME} PRIVATE 
+	Qt${QT_VERSION_MAJOR}::Core 
+	Qt${QT_VERSION_MAJOR}::Widgets 
+	Qt${QT_VERSION_MAJOR}::PrintSupport
+	Qt${QT_VERSION_MAJOR}::OpenGL
+	Qt${QT_VERSION_MAJOR}::OpenGLWidgets
+	#Qt${QT_VERSION_MAJOR}::Linguist  
+	LCPlot
+	opengl32)
+
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}
 	${Q_CUSTOM_PLOT_PATH}

@@ -1,5 +1,28 @@
 <RCC>
     <qresource prefix="/data">
         <file>resources/test_curve.json</file>
+        <file>styles.css</file>
+        <file>resources/Component Library/blast joint.svg</file>
+        <file>resources/Component Library/casing.svg</file>
+        <file>resources/Component Library/cement plug.svg</file>
+        <file>resources/Component Library/cement.svg</file>
+        <file>resources/Component Library/centralize.svg</file>
+        <file>resources/Component Library/collar.svg</file>
+        <file>resources/Component Library/double tubing.svg</file>
+        <file>resources/Component Library/fish.svg</file>
+        <file>resources/Component Library/fluid.svg</file>
+        <file>resources/Component Library/gas lift mandrel.svg</file>
+        <file>resources/Component Library/landing nipple.svg</file>
+        <file>resources/Component Library/open hole.svg</file>
+        <file>resources/Component Library/packer.svg</file>
+        <file>resources/Component Library/perforations.svg</file>
+        <file>resources/Component Library/pump.svg</file>
+        <file>resources/Component Library/screen.svg</file>
+        <file>resources/Component Library/SSD.svg</file>
+        <file>resources/Component Library/TD.svg</file>
+        <file>resources/Component Library/TRSSV.svg</file>
+        <file>resources/Component Library/tubing.svg</file>
+        <file>resources/Component Library/wireline entry.svg</file>
+        <file>resources/Component Library/Y-tool.svg</file>
     </qresource>
 </RCC>

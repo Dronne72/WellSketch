@@ -8,12 +8,33 @@
 
 #include <QFile>
 #include <QJsonDocument>
+#include "ComponentsLibrary/componentlibrarywidget.h"
+#include "WellSchematicTree/wellschematictree.h"
+#include "WellSchematic/wellopenglwidget.h"
+#include "PropertiesWidget/propertiesview.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle("Well Schematic Constructor");
+
+    ComponentLibraryWidget *CLwidget = new ComponentLibraryWidget(this);
+    ui->plots_layout->addWidget(CLwidget, 0);
+
+    // PropertiesWidget  *PRwidget = new PropertiesWidget(this);
+    // ui->plots_layout->addWidget(PRwidget, 1);
+
+    // PropertiesView *PRwidget = new PropertiesView(this);
+    // ui->plots_layout->addWidget(PRwidget, 1);
+
+    WellSchematicTree *m_wellTree = new WellSchematicTree(this);
+
+    WellOpenGLWidget* WELLglWGT = new WellOpenGLWidget(this);
+    ui->plots_layout->addWidget(WELLglWGT, 1);
+    // WellSchematicViewWidget  *WShwidget = new WellSchematicViewWidget(this);
+    // ui->plots_layout->addWidget(WShwidget, 1);
 }
 //-----------------------------------------------------------------------------
 MainWindow::~MainWindow()
@@ -95,7 +116,7 @@ void MainWindow::createDepthAxis() {
         m_depthScaleTable->setShowGrid(false);
         m_depthScaleTable->setSelectionMode(QTableWidget::NoSelection);
 
-        ui->plots_layout->addWidget(m_depthScaleTable, 0);
+        // ui->plots_layout->addWidget(m_depthScaleTable, 0);
 
         m_depthAxisTrack = new DepthScaleTrack(this);
 
@@ -124,7 +145,7 @@ void MainWindow::createDepthAxis() {
         m_logPlotTable->verticalHeader()->hide();
         m_logPlotTable->horizontalHeader()->setSectionsMovable(true);
         m_logPlotTable->setRowCount(1);
-        ui->plots_layout->addWidget(m_logPlotTable, 1);
+        // ui->plots_layout->addWidget(m_logPlotTable, 1);
     }
 }
 //-----------------------------------------------------------------------------
@@ -206,3 +227,9 @@ void MainWindow::onRangeChanged(const QCPRange &newRange,
         }
     }
 }
+
+void MainWindow::on_pB_cansel_clicked()
+{
+    close();
+}
+

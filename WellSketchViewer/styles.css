@@ -1,0 +1,170 @@
+/* Основной фон приложения */
+QMainWindow, QWidget {
+    background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+/* Стиль для QMainWindow - темно-синяя рамка */
+QMainWindow {
+    border: 2px solid #0606c6; /* Темно-синяя рамка со всех сторон */
+    border-radius: 2px;
+}
+
+/* Стиль для QWidget - синяя рамка */
+QWidget {
+    border: 1px solid #0606c6; /* Синяя рамка со всех сторон */
+    border-radius: 2px;
+}
+
+/* Стиль для QFrame - темно-синяя рамка только снизу */
+QFrame {
+    border: none; /* Убираем все рамки */
+    border-bottom: 1px solid #0606c6; /* Темно-синяя рамка только снизу */
+    background-color: transparent; /* Прозрачный фон */
+}
+
+/* Стиль для QToolButton - скругленные, белая заливка, зеленая кайма, черный текст */
+QToolButton {
+    background-color: #ffffff; /* Белая заливка */
+    border: 2px solid #27ae60; /* Зеленая кайма */
+    border-radius: 15px; /* Скругление углов */
+    color: #000000; /* Черный цвет шрифта */
+    font-weight: bold;
+    padding: 6px 12px; /* Достаточные отступы для текста */
+    font-size: 12px;
+    /* Критически важные свойства для отображения текста */
+    min-width: 0px; /* Убираем минимальную ширину */
+    max-width: none; /* Убираем ограничение максимальной ширины */
+    margin: 1px; /* Небольшой отступ */
+}
+
+/* Специфичные стили для обеспечения отображения текста */
+QToolButton::menu-button {
+    width: 0px; /* Убираем место для меню */
+}
+
+QToolButton::menu-arrow {
+    image: none; /* Убираем стрелку меню */
+}
+
+QToolButton:hover {
+    background-color: #f8f8f8; /* Слегка темнее белый при наведении */
+    border: 2px solid #2ecc71; /* Более яркая зеленая кайма */
+}
+
+QToolButton:pressed {
+    background-color: #eeeeee; /* Еще темнее при нажатии */
+    border: 2px solid #219653; /* Темнее зеленая кайма */
+}
+
+QToolButton:checked {
+    background-color: #e8f5e8; /* Светло-зеленый фон при выборе */
+    border: 2px solid #27ae60;
+}
+
+QToolButton:disabled {
+    background-color: #cccccc; /* Серый фон при отключении */
+    border: 2px solid #95a5a6; /* Серо-зеленая кайма */
+    color: #666666; /* Серый текст */
+}
+
+/* Стиль для QPushButton - темно-серый градиент */
+QPushButton {
+    /* Вертикальный градиент от темно-серого к серому */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #4a4a4a,
+                                stop: 0.5 #5a5a5a,
+                                stop: 1 #4a4a4a);
+    border: 1px solid #333333; /* Темно-серая кайма */
+    border-radius: 6px; /* Скругление углов */
+    color: #ffffff; /* Белый текст */
+    font-weight: bold;
+    padding: 6px 12px;
+    font-size: 13px;
+    min-width: 0px; /* Убираем минимальную ширину */
+    max-width: none; /* Убираем ограничение максимальной ширины */
+}
+
+QPushButton:hover {
+    /* Более светлый градиент при наведении */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #5a5a5a,
+                                stop: 0.5 #6a6a6a,
+                                stop: 1 #5a5a5a);
+    border: 1px solid #444444;
+}
+
+QPushButton:pressed {
+    /* Темный градиент при нажатии */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #3a3a3a,
+                                stop: 0.5 #4a4a4a,
+                                stop: 1 #3a3a3a);
+    border: 1px solid #222222;
+}
+
+QPushButton:checked {
+    /* Синий градиент для выбранного состояния */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #2980b9,
+                                stop: 0.5 #3498db,
+                                stop: 1 #2980b9);
+    border: 1px solid #1c638e;
+}
+
+QPushButton:disabled {
+    /* Серый градиент для отключенного состояния */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #a0a0a0,
+                                stop: 0.5 #b0b0b0,
+                                stop: 1 #a0a0a0);
+    border: 1px solid #888888;
+    color: #666666;
+}
+
+/* Стиль для кнопок с иконками */
+QToolButton[icon-only="true"] {
+    padding: 6px;
+    border-radius: 12px;
+}
+
+QPushButton[icon-only="true"] {
+    padding: 6px;
+    border-radius: 6px;
+}
+
+/* Стиль для панелей */
+QToolBar {
+    background-color: #e0e0e0;
+    border: none;
+    spacing: 5px;
+    padding: 8px;
+}
+
+QToolBar::separator {
+    background-color: #cccccc;
+    width: 1px;
+    margin: 0px 8px;
+}
+
+/* Исключения для некоторых виджетов чтобы не было рекурсии */
+QScrollArea, QTabWidget, QStackedWidget, QMdiArea, QDialog {
+    border: none;
+}
+
+/* Специальные стили для группирующих виджетов */
+QGroupBox {
+    border: 2px solid #1e3a5c;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #333333;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px 0 5px;
+    color: #1e3a5c;
+}
