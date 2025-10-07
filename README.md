@@ -1,1 +1,1 @@
-Maria Barkova to develope the Well Sketch component fo Mercury software project.
+Maria Barkova (MaryBark) to develope the Well Sketch component fo Mercury software project.
